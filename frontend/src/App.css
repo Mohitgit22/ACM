@@ -1,0 +1,612 @@
+/* GENERAL STYLING */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Theme variables */
+:root {
+  /* Dark theme (default) variables */
+  --primary-bg: #121212;
+  --secondary-bg: #1e1e1e;
+  --card-bg: #232323;
+  --accent-color: #00e5ff;
+  --secondary-accent: #ff9100;
+  --light-text: #f5f5f5;
+  --dim-text: #b3b3b3;
+  --heading-text: #ffffff;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  --transition: all 0.3s ease;
+  --navbar-bg: rgba(0, 0, 0, 0.9);
+  --navbar-scrolled-bg: #1e1e1e;
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  --card-header-bg: rgba(0, 0, 0, 0.3);
+  --card-border: rgba(255, 255, 255, 0.05);
+  --image-placeholder-bg: #2c2c2c;
+  --hover-bg: rgba(0, 229, 255, 0.15);
+  --footer-bg: #0a0a0a;
+  --footer-border: rgba(255, 255, 255, 0.05);
+}
+
+/* Light theme variables */
+.light-theme {
+  --primary-bg: #f5f5f5;
+  --secondary-bg: #e5e5e5;
+  --card-bg: #ffffff;
+  --accent-color: #0097b3;
+  --secondary-accent: #e67e00;
+  --light-text: #333333;
+  --dim-text: #555555;
+  --heading-text: #222222;
+  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --card-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --navbar-scrolled-bg: #ffffff;
+  --navbar-border: rgba(0, 0, 0, 0.1);
+  --card-header-bg: rgba(0, 0, 0, 0.05);
+  --card-border: rgba(0, 0, 0, 0.1);
+  --image-placeholder-bg: #e0e0e0;
+  --hover-bg: rgba(0, 151, 179, 0.1);
+  --footer-bg: #e0e0e0;
+  --footer-border: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--light-text);
+  background-color: var(--primary-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 80px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+}
+
+header h1 {
+  color: var(--heading-text);
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  color: var(--heading-text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+/* NAVBAR STYLING */
+.navbar {
+  background-color: var(--navbar-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition), background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.8rem 1rem;
+  background-color: var(--navbar-scrolled-bg);
+  border-bottom: 1px solid var(--navbar-border);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.acm-logo {
+  color: var(--accent-color);
+  font-weight: 800;
+  margin-right: 8px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: var(--transition);
+  color: var(--light-text);
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.light-theme .theme-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-icon {
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover .theme-icon {
+  transform: rotate(30deg);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 1.5rem;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: var(--transition);
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.nav-links:hover,
+.nav-links.active {
+  color: var(--accent-color);
+}
+
+.nav-links::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.nav-links:hover::after,
+.nav-links.active::after {
+  width: 100%;
+}
+
+/* Mobile Menu Button - Will be made visible on smaller screens */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--light-text);
+  font-size: 1.5rem;
+}
+
+/* POSITION HOLDERS STYLING */
+.position-holders {
+  margin-bottom: 4rem;
+}
+
+.position-holders-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.position-holder-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--card-border);
+}
+
+.position-holder-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  border-color: var(--accent-color);
+}
+
+.light-theme .position-holder-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  padding: 1.5rem;
+  background-color: var(--card-header-bg);
+  text-align: center;
+}
+
+.image-placeholder {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--image-placeholder-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--accent-color);
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.position-holder-card h3 {
+  color: var(--secondary-accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.position-holder-card h4 {
+  color: var(--heading-text);
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.vision-placeholder {
+  font-style: italic;
+  color: var(--dim-text);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  line-height: 1.7;
+}
+
+/* OTHER MEMBERS STYLING */
+/* Add these styles to your App.css file */
+
+/* Replace the current .other-members ul with this new grid layout */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Style for each member card */
+.member-card {
+  background-color: var(--card-bg);
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  transition: var(--transition);
+  border-left: 3px solid var(--accent-color);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  height: 60px; /* Fixed height for all cards */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-card:hover {
+  transform: translateX(5px);
+  background-color: var(--hover-bg);
+  border-left-color: var(--secondary-accent);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.light-theme .member-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.member-name {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Update responsive design for members grid */
+@media (max-width: 480px) {
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ABOUT PAGE STYLING */
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background-color: var(--secondary-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+}
+
+.about-page h1 {
+  color: var(--heading-text);
+  font-size: 2.4rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.about-page h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+.about-page h2 {
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1.2rem;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-page h2::after {
+  left: 0;
+  transform: none;
+  width: 60px;
+}
+
+.about-page p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  color: var(--dim-text);
+  line-height: 1.8;
+}
+
+.about-page ul {
+  margin: 1.2rem 0 1.8rem 1.5rem;
+  color: var(--dim-text);
+}
+
+.about-page li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.about-page li::before {
+  content: '•';
+  color: var(--accent-color);
+  position: absolute;
+  left: -1rem;
+  font-size: 1.2rem;
+}
+
+/* FOOTER STYLING */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--light-text);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+  border-top: 1px solid var(--footer-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--dim-text);
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+
+  main {
+    padding-top: 70px;
+  }
+  
+  .position-holders-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar mobile styling */
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .theme-toggle-btn {
+    margin-right: 15px;
+    z-index: 1001; /* Ensure it stays above the mobile menu */
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid var(--navbar-border);
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .nav-item {
+    margin: 0;
+  }
+  
+  .nav-links {
+    display: block;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .navbar.scrolled .nav-menu {
+    background-color: var(--navbar-scrolled-bg);
+  }
+  
+  /* Other responsive adjustments */
+  .position-holders-list {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .other-members ul {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 70px 15px 30px;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+  }
+  
+  .other-members ul {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .about-page {
+    padding: 1.5rem;
+  }
+  
+  .about-page h1 {
+    font-size: 1.8rem;
+  }
+  
+  .about-page h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,39 @@
+:root {
+  --primary-color: #0055a3;
+  --secondary-color: #00285f;
+  --accent-color: #2196f3;
+  --light-accent: #e3f2fd;
+  --background-color: #f9f9f9;
+  --card-background: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-light: #ffffff;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 85, 163, 0.1);
+  --transition: all 0.3s ease;
+  --font-main: 'Roboto', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-headings: 'Montserrat', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
