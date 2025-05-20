@@ -6,6 +6,8 @@ import AboutPage from './pages/AboutPage';
 import PositionHolderCard from './components/PositionHolderCard';
 import OtherMembersList from './components/OtherMembersList';
 import ContactsPage from './pages/ContactsPage';
+import raviShankar from './assets/Ravisir.jpg';
+
 
 // Import images
 import arionDas from './assets/arion_das.jpg';
@@ -13,10 +15,16 @@ import prachiKumari from './assets/prachi_dubey.jpeg';
 import akshayDubey from './assets/akshay_kumar_dubey.jpeg';
 import anshuKumar from './assets/anshu.jpeg';
 import aakashSemwal from './assets/aakash_semwal.jpeg';
+import EventsPage from './pages/EventsPage';
 
 function App() {
   const positionHolders = [
-    {
+       {
+      post: 'Faculty Advisor',
+      name: 'Dr. Ravi Shanker',
+      vision: 'To guide and mentor the ACM Student Chapter, fostering a culture of innovation, collaboration, and excellence in computing.',  
+      imageUrl: raviShankar
+       },{
       post: 'Chair',
       name: 'Arion Das',
       vision: 'Only one seed in a mango.',
@@ -24,7 +32,7 @@ function App() {
     },
     {
       post: 'Vice Chair',
-      name: 'Prachi Kumari',
+      name: 'Prachi Dubey',
       vision: 'To empower every member to contribute meaningfully and collaboratively, fostering a vibrant and inclusive tech community.',
       imageUrl: prachiKumari
     },
@@ -49,8 +57,8 @@ function App() {
   ];
 
   const otherMembers = [
-    'Mohit Verma', 'Sahil Raj', 'Sahil Aggarwal', 'Anshu Kumar', 
-    'Ayush Kushwaha', 'Aakash Semwal', 'Satyam Kumar', 'Shaurya Singh', 
+    'Mohit Verma', 'Sahil Raj', 'Sahil Aggarwal', 
+    'Ayush Kushwaha', 'Satyam Kumar', 'Shaurya Singh', 
     'Swapnil', 'Vikram Choudhary', 'Yogeshwar Yadav'
   ];
 
@@ -66,7 +74,6 @@ function App() {
                 <header>
                   <h1>ACM STUDENT CHAPTER - IIIT RANCHI</h1>
                   <p className="tagline">Advancing Computing as a Science & Profession</p>
-                  <button className="join-btn">Join Us</button>
                 </header>
                 
                 <section className="position-holders">
@@ -91,7 +98,7 @@ function App() {
             } />
             
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/events" element={<div>This is the events page</div>} />
+            <Route path="/events" element={<EventsPage />} />
             <Route path="/contact" element={<ContactsPage />} />
           </Routes>
         </main>
@@ -99,10 +106,10 @@ function App() {
         <footer>
           <div className="footer-content">
             <div className="social-links">
-              <a href="https://twitter.com/acm_iiitranchi" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-              <a href="https://www.youtube.com/channel/UC-example" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
-              <a href="https://www.instagram.com/acm_iiitranchi/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-              <a href="https://www.facebook.com/acm.iiitranchi" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-x-twitter"></i></a>
+        
+              <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/share/1EaeGyF5F5/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
             </div>
             <p>Contact Us: <a href="mailto:acm.chapter@cse.iiit.ac.in">acm.chapter@cse.iiit.ac.in</a></p>
             <p>© {new Date().getFullYear()} ACM Student Chapter - IIIT RANCHI. All Rights Reserved.</p>
