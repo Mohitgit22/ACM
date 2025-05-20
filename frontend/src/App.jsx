@@ -33,7 +33,7 @@ function App() {
     {
       post: 'Vice Chair',
       name: 'Prachi Dubey',
-      vision: 'To empower every member to contribute meaningfully and collaboratively, fostering a vibrant and inclusive tech community.',
+      vision: 'As Vice Chair of our ACM student chapter, my technical vision is to advance engineering excellence through innovation and practical application, finding solutions and shaping the future of technology.',
       imageUrl: prachiKumari
     },
     {
@@ -51,10 +51,14 @@ function App() {
     {
       post: 'Webmaster',
       name: 'Aakash Semwal',
-      vision: 'To build and maintain a dynamic digital presence that reflects the spirit of our chapter and keeps our community informed, engaged, and inspired.',
+      vision: 
+      ' We aim to establish our chapter as the go-to resource for members, alumni, and the wider tech community, fostering engagement and knowledge sharing.',
       imageUrl: aakashSemwal
     }
   ];
+
+
+
 
   const otherMembers = [
     'Mohit Verma', 'Sahil Raj', 'Sahil Aggarwal', 
