@@ -61,7 +61,7 @@ function App() {
 
 
   const otherMembers = [
-    'Mohit Verma', 'Sahil Raj', 'Sahil Aggarwal', 
+    'Mohit Verma', 'Sahil Raj','Irfan Ansari','Sahil Aggarwal', 
     'Ayush Kushwaha', 'Satyam Kumar', 'Shaurya Singh', 
     'Swapnil', 'Vikram Choudhary', 'Yogeshwar Yadav'
   ];
