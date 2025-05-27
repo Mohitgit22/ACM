@@ -15,14 +15,14 @@ const events = [
 	},
 	{
 		title: 'SYSTEMS & NETWORKS',
-		date: 'February 2024',
+		
 		image: networks,
 		description:
 			'Systems and Networks group focuses on research and applications in areas like OS, DBMS and Computer Networks.',
 	},
 	{
 		title: 'THEORETICAL COMPUTER SCIENCE',
-		date: 'January 2024',
+		
 		image: TS,
 		description:
 			'Theoretical CS focuses on research and applications in areas like DSA, Computationl Complexity Theory and Cryptography.',
