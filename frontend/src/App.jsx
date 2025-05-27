@@ -27,7 +27,7 @@ function App() {
        },{
       post: 'Chair',
       name: 'Arion Das',
-      vision: 'Only one seed in a mango.',
+      vision: 'As Chair of our ACM student chapter, I believe in empowering minds through collaboration, innovation, and a relentless pursuit of technical excellence. Our mission is to create an environment where ideas flourish, knowledge is shared, and every challenge becomes an opportunity to lead, learn, and build impactful solutions for the future.',
       imageUrl: arionDas
     },
     {
