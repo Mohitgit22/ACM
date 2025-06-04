@@ -27,7 +27,7 @@ function App() {
        },{
       post: 'Chair',
       name: 'Arion Das',
-      vision: 'As Chair of our ACM student chapter, I strive to foster a culture of innovation, collaboration, and technical growth—where ideas turn into impact, and every challenge is a chance to build a better future.',
+      vision: 'To align collaborators towards AI research which promises to deliver better than existing solutions.',
       imageUrl: arionDas
     },
     {
@@ -115,7 +115,7 @@ function App() {
               <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
               <a href="https://www.facebook.com/share/1EaeGyF5F5/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i></a>
             </div>
-            <p>Contact Us: <a href="mailto:acm.chapter@cse.iiit.ac.in">acm.chapter@cse.iiit.ac.in</a></p>
+            <p>Contact Us: <a href="mailto:acm_chair@iiitranchi.ac.in">acm_chair@iiitranchi.ac.in</a></p>
             <p>© {new Date().getFullYear()} ACM Student Chapter - IIIT RANCHI. All Rights Reserved.</p>
           </div>
         </footer>
