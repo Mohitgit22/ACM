@@ -10,11 +10,11 @@ import raviShankar from './assets/Ravisir.jpg';
 
 
 // Import images
-import arionDas from './assets/arion_das.jpg';
-import prachiKumari from './assets/prachi_dubey.jpeg';
-import akshayDubey from './assets/akshay_kumar_dubey.jpeg';
-import anshuKumar from './assets/anshu.jpeg';
-import aakashSemwal from './assets/aakash_semwal.jpeg';
+import Vikram from './assets/vikram.jpg';
+import priyanka_sharma from './assets/priyanka.jpg';
+import Vivek_Kispotta from './assets/vivek.jpg';
+import Debyash_Deka from './assets/debyash.jpg';
+import Vipul_verma from './assets/vipul.jpg';
 import EventsPage from './pages/EventsPage';
 
 function App() {
@@ -26,34 +26,34 @@ function App() {
       imageUrl: raviShankar
        },{
       post: 'Chair',
-      name: 'Arion Das',
+      name: 'Vikram',
       vision: 'To align collaborators towards AI research which promises to deliver better than existing solutions.',
-      imageUrl: arionDas
+      imageUrl : Vikram
     },
     {
       post: 'Vice Chair',
-      name: 'Prachi Dubey',
+      name: 'Priyanka Sharma ',
       vision: 'As Vice Chair of our ACM student chapter, my technical vision is to advance engineering excellence through innovation and practical application, finding solutions and shaping the future of technology.',
-      imageUrl: prachiKumari
+      imageUrl : priyanka_sharma
     },
     {
       post: 'Secretary',
-      name: 'Akshay Kumar Dubey',
+      name: 'Vivek Kispotta',
       vision: 'To ensure smooth coordination and communication across all chapter activities, making every initiative efficient and impactful.',
-      imageUrl: akshayDubey
+      imageUrl : Vivek_Kispotta
     },
     {
       post: 'Treasurer',
-      name: 'Anshu Kumar',
+      name: 'Dibyash Deka',
       vision: 'Our aim is to make the ACM Student Chapter a hub of innovation, where every student can explore, create, and share technology that makes a difference. Our vision is a community that inspires curiosity, fosters bold ideas, and drives real-world impact.',
-      imageUrl: anshuKumar
+      imageUrl: Debyash_Deka
     },
     {
       post: 'Webmaster',
-      name: 'Aakash Semwal',
+      name: 'Vipul Verma ',
       vision: 
       ' We aim to establish our chapter as the go-to resource for members, alumni, and the wider tech community, fostering engagement and knowledge sharing.',
-      imageUrl: aakashSemwal
+      imageUrl : Vipul_verma
     }
   ];
 
