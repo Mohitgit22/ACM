@@ -7,7 +7,8 @@ import PositionHolderCard from './components/PositionHolderCard';
 import OtherMembersList from './components/OtherMembersList';
 import ContactsPage from './pages/ContactsPage';
 import raviShankar from './assets/Ravisir.jpg';
-
+import abhinavKumar from './assets/abhinav-sir.png';
+import priyankaKhare from './assets/priyank-khare.png';
 
 // Import images
 import Vikram from './assets/vikram.jpg';
@@ -24,7 +25,20 @@ function App() {
       name: 'Dr. Ravi Shanker',
       vision: 'To guide and mentor the ACM Student Chapter, fostering a culture of innovation, collaboration, and excellence in computing.',  
       imageUrl: raviShankar
-       },{
+       },
+       {
+        post: 'Membership Chair',
+        name: 'Dr. Abhinav Kumar',
+        vision: 'To inspire students to explore emerging technologies, strengthen their technical skills, and build innovative solutions through collaboration and continuous learning.',
+        imageUrl: abhinavKumar
+      },
+      {
+        post: '',
+        name: 'Dr. Priyank Khare',
+        vision: 'To encourage creativity, research, and teamwork among students while creating opportunities for academic and professional growth in computing.',
+        imageUrl: priyankaKhare
+      },
+    {
       post: 'Chair',
       name: 'Vikram',
       vision: 'To align collaborators towards AI research which promises to deliver better than existing solutions.',
